@@ -1,10 +1,64 @@
 {
-  "name": "castv2-player",
-  "version": "1.1.3",
-  "description": "A Chromecast client based on the new (CASTV2) protocol",
-  "author": "angelnu",
-  "license": "MIT",
-  "main": "index.js",
+  "_args": [
+    [
+      {
+        "raw": "castv2-player@git+https://github.com/kmerabet/castv2-player.git",
+        "scope": null,
+        "escapedName": "castv2-player",
+        "name": "castv2-player",
+        "rawSpec": "git+https://github.com/kmerabet/castv2-player.git",
+        "spec": "git+https://github.com/kmerabet/castv2-player.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:kmerabet/castv2-player.git",
+          "sshUrl": "git+ssh://git@github.com/kmerabet/castv2-player.git",
+          "httpsUrl": "git+https://github.com/kmerabet/castv2-player.git",
+          "gitUrl": "git://github.com/kmerabet/castv2-player.git",
+          "shortcut": "github:kmerabet/castv2-player",
+          "directUrl": "https://raw.githubusercontent.com/kmerabet/castv2-player/master/package.json"
+        }
+      },
+      "/home/kmerabet/Documents/sii/node-app"
+    ]
+  ],
+  "_from": "git+https://github.com/kmerabet/castv2-player.git",
+  "_id": "castv2-player@1.1.3",
+  "_inCache": true,
+  "_location": "/castv2-player",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "castv2-player@git+https://github.com/kmerabet/castv2-player.git",
+    "scope": null,
+    "escapedName": "castv2-player",
+    "name": "castv2-player",
+    "rawSpec": "git+https://github.com/kmerabet/castv2-player.git",
+    "spec": "git+https://github.com/kmerabet/castv2-player.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:kmerabet/castv2-player.git",
+      "sshUrl": "git+ssh://git@github.com/kmerabet/castv2-player.git",
+      "httpsUrl": "git+https://github.com/kmerabet/castv2-player.git",
+      "gitUrl": "git://github.com/kmerabet/castv2-player.git",
+      "shortcut": "github:kmerabet/castv2-player",
+      "directUrl": "https://raw.githubusercontent.com/kmerabet/castv2-player/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/kmerabet/castv2-player.git#d63bfe40a7aeb23428e483efd928e328eeba0bad",
+  "_shasum": "b2139ea9586ed741acf4d506bc55dfb10a60997c",
+  "_shrinkwrap": null,
+  "_spec": "castv2-player@git+https://github.com/kmerabet/castv2-player.git",
+  "_where": "/home/kmerabet/Documents/sii/node-app",
+  "author": {
+    "name": "angelnu"
+  },
+  "bugs": {
+    "url": "https://github.com/angelnu/castv2-player/issues"
+  },
   "dependencies": {
     "array-find": "^1.0.0",
     "castv2-client": "^1.2.0",
@@ -17,18 +71,28 @@
     "sprintf-js": "^1.0.3",
     "util": "^0.10.3"
   },
+  "description": "A Chromecast client based on the new (CASTV2) protocol",
   "devDependencies": {
     "mocha": "^3.2.0"
   },
-  "scripts": {
-    "test": "node_modules/.bin/mocha"
-  },
+  "gitHead": "d63bfe40a7aeb23428e483efd928e328eeba0bad",
+  "homepage": "https://github.com/angelnu/castv2-player#readme",
+  "keywords": [
+    "chromecast",
+    "castv2"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "castv2-player",
+  "optionalDependencies": {},
+  "readme": "cast2-player\n============\n\n[![NPM version](http://img.shields.io/npm/v/castv2-player.svg)](https://www.npmjs.com/package/castv2-player)\n[![Downloads](https://img.shields.io/npm/dm/castv2-player.svg)](https://www.npmjs.com/package/castv2-player)\n\n[![NPM](https://nodei.co/npm/castv2-player.png?downloads=true)](https://nodei.co/npm/castv2-player/)\n\n### A Node.js Chromecast player library\nA player based on the new (CASTV2) protocol used by Chromecast\n\nBuilt as wrapper of the [node-castv2-client](https://github.com/thibauts/node-castv2-client) library.\n\n##Features\n* Scanner\n  * for each device: name, IP, port, type (audio, video, audio group) \n  * periodically scans for new devices\n  * report updates in device such as new IP or port\n* Media Player\n  * Automatically (re-) connects to device\n  * Return live and cached status\n  * Can start playing with an URL -> all required info is derived from it\n    * detect media type\n    * detect playlists (m3u, pls, etc)\n  * Can play announcements\n    * announcements are inserted in currently playing playlist\n    * announcements can be played with a different volume (check the [announcement](examples/announcementInStreaming.js) example)\n    * currently playing track is resumed at the same location it was before\n  * Can jump between the playlist\n  * Can update the playlist\n\n\n##Examples\nCheck the [examples folder](examples/). The [helloWorld.js](examples/helloWorld.js) should work out of the box. For the remaining testcases you will need to adjust the [defines.js](examples/defines.js) to point to your setup.\n\nYou can run all examples as testcases with `npm test`\n\n## Intefaces\n\nCheck the [main class](lib/mediaPlayer.js).\n",
+  "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git://github.com/angelnu/castv2-player.git"
   },
-  "keywords": [
-    "chromecast",
-    "castv2"
-  ]
+  "scripts": {
+    "test": "mocha"
+  },
+  "version": "1.1.3"
 }
