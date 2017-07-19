@@ -61,7 +61,7 @@
   },
   "dependencies": {
     "array-find": "^1.0.0",
-    "castv2-client": "^1.2.0",
+    "castv2-client": "git+https://github.com/kmerabet/node-castv2-client.git",
     "dev-null": "^0.1.1",
     "dns-txt": "^2.0.2",
     "icy": "^2.1.0",
